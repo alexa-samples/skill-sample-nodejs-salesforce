@@ -7,9 +7,9 @@
 ### Obtain Your Amazon Developer Account Linking Redirect URLs
 In order to set up your Salesforce Connected App, you need your Amazon Developer Account Linking Redirect URLs. This is specific to your Amazon Developer account. You do not need to save any settings on this page at this time.
 
-1. Go to ```https://developer.amazon.com/edw/home.html#/skill/<Skill ID>/en_US/configuration```. 
-2. Under Account Linking, click **Yes**.
-3. Copy and store the three URLs that show next to Redirect URLs. They will look like this: 
+1. Go to ```https://developer.amazon.com/alexa/console/ask/<Skill ID>/development/en_US/account-linking```.
+2. Move the slider to the right of the question "Do you allow users to create an account or link to an existing account with you?" to the right to enable account linking.
+3. Copy and store the three URLs that show next to Redirect URLs at the bottom of the page. They will look like this:
   * ```https://alexa.amazon.co.jp/api/skill/link/<Vendor ID> ```
   * ```https://layla.amazon.com/api/skill/link/<Vendor ID> ```
   * ```https://pitangui.amazon.com/api/skill/link/<Vendor ID>```
@@ -51,8 +51,10 @@ $ ask api create-account-linking -s <Skill ID>
 ? Access Token URI:  https://login.salesforce.com/services/oauth2/token
 ? Client Secret:  [hidden] <Your Client Secret>
 ? Client Authentication Scheme:  REQUEST_BODY_CREDENTIALS
+? Optional* Default Access Token Expiration Time In Seconds: 3600
 Account Linking created successfully.
 ```
 
+2. The **Default Access Token Expiration Time In Seconds** field is required for Salesforce account linking. If you notice that you need to constantly re-link your Salesforce account to use the skill, re-do the previous step.
 
 [![Next](https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/button-next._TTH_.png)](./4-testing.md)
