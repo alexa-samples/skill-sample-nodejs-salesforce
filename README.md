@@ -33,7 +33,7 @@ You need a [Salesforce Trailhead Playground](https://trailhead.salesforce.com/en
 
 ## Objectives
 
-Together, we'll build a skill that is invoked with the name Salesforce Demo".
+Together, we'll build a skill that is invoked with the name Salesforce Demo.
 
 ```text
 Alexa, open Salesforce Demo

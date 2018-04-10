@@ -20,12 +20,12 @@
 module.exports = Object.freeze({
     
     // App-ID. TODO: set to your own Skill App ID from the developer portal.
-    appId : '',
+    appId : process.env.SKILL_ID || '',
 
     // Salesforce Constants
-    INSTANCE_URL : '', // TODO Set your own
-    VOICE_CODE_OBJECT_NAME : 'voice_code__c',
-    VOICE_CODE_FIELD_NAME : 'code__c',
+    INSTANCE_URL : process.env.INSTANCE_URL || '', // TODO Set your own
+    VOICE_CODE_OBJECT_NAME : process.env.VOICE_CODE_OBJECT_NAME || 'voice_code__c',
+    VOICE_CODE_FIELD_NAME : process.env.VOICE_CODE_FIELD_NAME ||'code__c',
 
     // Custom Skill Settings
     dynamoDBTableName : 'Salesforce_Skill',
