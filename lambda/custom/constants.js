@@ -33,7 +33,7 @@ module.exports = Object.freeze({
     SALESFORCE_USER_ID : 'salesforceUserId',
 
     // For code debugging
-    DEBUG : false,
+    DEBUG : true,
 
     // States for state handlers
     STATES : {

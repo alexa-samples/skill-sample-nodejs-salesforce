@@ -24,7 +24,7 @@
 
 'use strict';
 
-var Alexa = require('alexa-sdk');
+var Alexa = require('ask-sdk-v1adapter');
 var constants = require('./constants');
 var languageStrings = require('./resourceStrings');
 var voiceCodeHandlers = require('./voiceCodeHandlers');

@@ -19,7 +19,7 @@
 
 'use strict';
 
-const Alexa = require('alexa-sdk');
+const Alexa = require('ask-sdk-v1adapter');
 const bcrypt = require('bcryptjs');
 
 const constants = require('./constants');
@@ -68,7 +68,7 @@ var voiceCodeHandlers = {
                     // We know the salesforce user ID and that the person has a code
                     speechOutput = this.t("WELCOME_MESSAGE") + this.t("WELCOME_HAS_CODE");
                     this.attributes['HAS_CODE'] = true;
-                    this.emit(":ask", speechOutput);
+                    this.emit(":ask", speechOutput, speechOutput);
                 } else {
                     // Get the user's ID
                     sf.getIdentity(accessToken, identityCallback, this);
@@ -270,12 +270,12 @@ function getVoiceCodeCallback(err, resp) {
             // User has a code, prompt them to say it.
             speechOutput = this.t("WELCOME_MESSAGE") + this.t("WELCOME_HAS_CODE");
             this.attributes['HAS_CODE'] = true;
-            this.emit(":ask", speechOutput);
+            this.emit(":ask", speechOutput, speechOutput);
         } else {
             // User doesn't have a code, prompt them to create one
             speechOutput = this.t("WELCOME_MESSAGE") + this.t("WELCOME_NO_CODE");
             this.attributes['HAS_CODE'] = false;
-            this.emit(":ask", speechOutput);
+            this.emit(":ask", speechOutput, speechOutput);
         }
     } else {
         console.log("Error in voice code query: " + JSON.stringify(err));

@@ -9,7 +9,8 @@
   "author": "Amazon.com, Inc.",
   "license": "Amazon Software License",
   "dependencies": {
-    "alexa-sdk": "^1.0.15",
+    "ask-sdk": "^2.0.0",
+    "ask-sdk-v1adapter": "^2.0.1",
     "bcryptjs": "^2.4.3",
     "nforce": "^1.7.0"
   }

@@ -19,7 +19,7 @@
  **/
  'use strict';
 
-var Alexa = require('alexa-sdk');
+var Alexa = require('ask-sdk-v1adapter');
 var bcrypt = require('bcryptjs');
 
 var constants = require('./constants');
