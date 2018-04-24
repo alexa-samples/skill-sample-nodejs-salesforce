@@ -4,18 +4,6 @@
       "invocationName": "salesforce demo",
       "intents": [
         {
-          "name": "AMAZON.CancelIntent",
-          "samples": []
-        },
-        {
-          "name": "AMAZON.HelpIntent",
-          "samples": []
-        },
-        {
-          "name": "AMAZON.RepeatIntent",
-          "samples": []
-        },
-        {
           "name": "AMAZON.StartOverIntent",
           "samples": [
             "start over",
@@ -24,55 +12,328 @@
           ]
         },
         {
-          "name": "AMAZON.StopIntent",
-          "samples": []
-        },
-        {
           "name": "ChangeCode",
+          "slots": [],
           "samples": [
             "I want to change my code",
             "change my code",
             "change my voice code",
             "I want to change my voice code"
-          ],
-          "slots": []
+          ]
         },
         {
           "name": "CodeIntent",
+          "slots": [
+            {
+              "name": "VOICE_CODE",
+              "type": "AMAZON.FOUR_DIGIT_NUMBER"
+            }
+          ],
           "samples": [
             "the pin is {VOICE_CODE}",
             "my pin is {VOICE_CODE}",
             "{VOICE_CODE}"
-          ],
-          "slots": [
-            {
-              "name": "VOICE_CODE",
-              "type": "AMAZON.FOUR_DIGIT_NUMBER",
-              "samples": []
-            }
           ]
         },
         {
           "name": "RecentLead",
+          "slots": [],
           "samples": [
             "for my leads",
             "lead",
             "for a lead",
             "for a recent lead"
-          ],
-          "slots": []
+          ]
         },
         {
           "name": "RecentOpportunity",
+          "slots": [],
           "samples": [
             "for my opportunities",
             "opportunity",
             "for an opportunity",
             "for a recent opportunity"
+          ]
+        },
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "SelectOpportunityIntent",
+          "slots": [
+            {
+              "name": "opportunity_name",
+              "type": "AMAZON.SearchQuery"
+            }
           ],
-          "slots": []
+          "samples": [
+            "Select opportunity {opportunity_name}",
+            "Select the {opportunity_name} opportunity",
+            "open the {opportunity_name} opportunity",
+            "open opportunity {opportunity_name}",
+            "find opportunity {opportunity_name}",
+            "find my opportunity {opportunity_name}",
+            "find the {opportunity_name} opportunity ",
+            "work on opportunity {opportunity_name}",
+            "opportunity {opportunity_name}",
+            "pick {opportunity_name}"
+          ]
+        },
+        {
+          "name": "UpdateOpportunityAmountIntent",
+          "slots": [
+            {
+              "name": "opportunity_value",
+              "type": "AMAZON.NUMBER",
+              "samples": [
+                "The amount is {opportunity_value}",
+                "{opportunity_value} dollars",
+                "{opportunity_value}"
+              ]
+            }
+          ],
+          "samples": [
+            "update the opportunity amount to {opportunity_value}",
+            "update the opportunity size to {opportunity_value}",
+            "update the opportunity value to {opportunity_value}",
+            "set the opportunity value to {opportunity_value}",
+            "set value to {opportunity_value}",
+            "update amount to {opportunity_value}",
+            "change amount to {opportunity_value}",
+            "set amount to {opportunity_value}",
+            "amount of opportunity is {opportunity_value}",
+            "opportunity amount is {opportunity_value}",
+            "value {opportunity_value}",
+            "amount {opportunity_value}",
+            "change opportunity amount to {opportunity_value}"
+          ]
+        },
+        {
+          "name": "UpdateOpportunityDateIntent",
+          "slots": [
+            {
+              "name": "opportunity_date",
+              "type": "AMAZON.DATE",
+              "samples": [
+                "the date is {opportunity_date}",
+                "{opportunity_date}"
+              ]
+            }
+          ],
+          "samples": [
+            "update the opportunity closing date to {opportunity_date}",
+            "update the opportunity close date to {opportunity_date}",
+            "Set the opportunity close date to {opportunity_date}",
+            "close date is {opportunity_date}",
+            "date is {opportunity_date}",
+            "set closing date to {opportunity_date}",
+            "set close date to {opportunity_date}",
+            "change close date to {opportunity_date}",
+            "change date to {opportunity_date}"
+          ]
+        },
+        {
+          "name": "UpdateOpportunityStageIntent",
+          "slots": [
+            {
+              "name": "opportunity_stage",
+              "type": "OpportunityStage",
+              "samples": [
+                "the stage is {opportunity_stage}",
+                "{opportunity_stage} stage",
+                "{opportunity_stage}"
+              ]
+            }
+          ],
+          "samples": [
+            "set the opportunity stage to {opportunity_stage}",
+            "update the opportunity stage to {opportunity_stage}",
+            "update the stage to {opportunity_stage}",
+            "update stage to {opportunity_stage}",
+            "set stage to {opportunity_stage}",
+            "stage is {opportunity_stage}",
+            "change stage to {opportunity_stage}"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "name": "OpportunityStage",
+          "values": [
+            {
+              "name": {
+                "value": "Closed lost"
+              }
+            },
+            {
+              "name": {
+                "value": "Closed Won",
+                "synonyms": [
+                  "won"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Commit",
+                "synonyms": [
+                  "committed"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Proposal/Price Quote",
+                "synonyms": [
+                  "proposal price quote",
+                  "proposal slash price quote",
+                  "price quote",
+                  "proposal "
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Perception Analysis"
+              }
+            },
+            {
+              "name": {
+                "value": "Id. Decision Makers",
+                "synonyms": [
+                  "i. d. decision makers"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Value Proposition",
+                "synonyms": [
+                  "value prop"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Needs Analysis"
+              }
+            },
+            {
+              "name": {
+                "value": "Qualification"
+              }
+            },
+            {
+              "name": {
+                "value": "Prospecting",
+                "synonyms": [
+                  "prospect"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "AMAZON.SearchQuery",
+          "values": [
+            {
+              "name": {
+                "value": "united oil installations"
+              }
+            }
+          ]
         }
       ]
-    }
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "UpdateOpportunityAmountIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "opportunity_value",
+              "type": "AMAZON.NUMBER",
+              "confirmationRequired": false,
+              "elicitationRequired": true,
+              "prompts": {
+                "elicitation": "Elicit.Slot.353309771982.971146653110"
+              }
+            }
+          ]
+        },
+        {
+          "name": "UpdateOpportunityDateIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "opportunity_date",
+              "type": "AMAZON.DATE",
+              "confirmationRequired": false,
+              "elicitationRequired": true,
+              "prompts": {
+                "elicitation": "Elicit.Slot.294060573857.1175160548971"
+              }
+            }
+          ]
+        },
+        {
+          "name": "UpdateOpportunityStageIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "opportunity_stage",
+              "type": "OpportunityStage",
+              "confirmationRequired": false,
+              "elicitationRequired": true,
+              "prompts": {
+                "elicitation": "Elicit.Slot.910695345118.760626685771"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.294060573857.1175160548971",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What is the new close date?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.353309771982.971146653110",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What is the new value?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.910695345118.760626685771",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What is the new stage?"
+          }
+        ]
+      }
+    ]
   }
 }

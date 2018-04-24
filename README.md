@@ -6,7 +6,7 @@
 
 ## Introduction
 
-This skill demonstrates how to build a private Alexa skill to access  Salesforce data. It includes using account linking, via a connected app in Salesforce, along with a voice code authentication process that stores the code as a custom setting in Salesforce.
+This skill demonstrates how to build a private Alexa skill to access  Salesforce data. It includes using account linking, via a connected app in Salesforce, along with a voice code confirmation process that stores the code as a custom setting in Salesforce. Then, you can access opportunities and make updates to them using your voice.
 
 ## Pre-requisites
 
