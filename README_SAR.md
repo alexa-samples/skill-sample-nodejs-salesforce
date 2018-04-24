@@ -26,7 +26,7 @@ One of the parameters for this application is the Salesforce Instance URL. If yo
 2. Once the deployment was completed, go to your [CloudFormation Stacks](https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks) and find the stack you just deployed.
 3. Click on the stack name.
 4. Expand the **Resources** menu.
-5. Copy the Lambda Function Name that was created. It should look something like this: ```<StackName>-AlexaSalesforceFunction-<Generated ID>```
+5. Copy the Lambda Function Name that was created. It should look something like this: ```aws-serverless-repository-AlexaSalesforceFunction-<Generated ID>```
 
 ## Part 3. Deploying the Alexa Skill front-end
 

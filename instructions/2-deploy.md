@@ -27,10 +27,10 @@ In this part, we will deploy our skill and create the AWS Lambda function that p
 2. If you wish to deploy the skill function using the AWS Serverless Application Repository, find the application [skill-sample-nodejs-salesforce](https://serverlessrepo.aws.amazon.com/applications/arn:aws:serverlessrepo:us-east-1:473507220772:applications~skill-sample-nodejs-salesforce).
 3. Follow the instructions to deploy the application, setting the required parameter for your Salesforce instance URL based off what you created in Part 1.
 4. Open your [Lambda console](https://console.aws.amazon.com/lambda/home).
-5. Find the function that is named something like this: **<Application/Stack Name>-AlexaSalesforceFunction-<Generated ID>**
+5. Find the function that is named something like this: **aws-serverless-repository-AlexaSalesforceFunction-<Generated ID>**
 6. Copy the full function name, including the stack name and generated ID at the end.
 7. Open the ```.ask/config``` in the root directory of this project.
-8. Modify the value of **"uri"** to be the function name.
+8. Modify the value of **"uri"** to be the function name you copied in step 6.
 
 ```
 "apis": {
