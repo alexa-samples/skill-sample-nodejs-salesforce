@@ -29,6 +29,6 @@ After the skill has been submitted, it takes about 30 minutes to 2 hours to prop
 
 ## Distribute the Skill to Users
 
-The Alexaa for Business account you gave access to will now be able to review and enable the skill for distribution to their enrolled users. For more information, see [Private Skills](https://docs.aws.amazon.com/a4b/latest/ag/private-skills.html) and [Managing Users](https://docs.aws.amazon.com/a4b/latest/ag/manage-users.html) in our [Alexa for Business documentation](https://docs.aws.amazon.com/a4b/latest/ag/what-is.html).
+The Alexa for Business account you gave access to will now be able to review and enable the skill for distribution to their enrolled users. For more information, see [Private Skills](https://docs.aws.amazon.com/a4b/latest/ag/private-skills.html) and [Managing Users](https://docs.aws.amazon.com/a4b/latest/ag/manage-users.html) in our [Alexa for Business documentation](https://docs.aws.amazon.com/a4b/latest/ag/what-is.html).
 
 With these steps, you have been able to create a private Alexa skill that allows you to interact with your Salesforce data. You were able to set up account linking and a personal voice code. Finally, you deployed the skill to an Alexa for Business organization.
