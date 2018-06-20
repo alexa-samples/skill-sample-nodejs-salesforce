@@ -241,16 +241,6 @@
               }
             }
           ]
-        },
-        {
-          "name": "AMAZON.SearchQuery",
-          "values": [
-            {
-              "name": {
-                "value": "united oil installations"
-              }
-            }
-          ]
         }
       ]
     },
