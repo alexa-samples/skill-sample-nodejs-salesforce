@@ -43,8 +43,9 @@ With the details set in your Trailhead Playground Org, we can set up account lin
 
 ```
 $ ask api create-account-linking -s <Skill ID>
+? Allow users to enable skill without account linking:  Yes
 ? Authorization URL:  https://login.salesforce.com/services/oauth2/authorize
-? Client ID:  <Your Client ID>
+? Client ID:  <Your Client ID / Consumer Key>
 ? Scopes(separate by comma):  api,refresh_token
 ? Domains(separate by comma):  
 ? Authorization Grant Type:  AUTH_CODE
