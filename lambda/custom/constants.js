@@ -10,11 +10,11 @@
 
 module.exports = Object.freeze({
 
-  // App-ID. TODO: set to your own Skill App ID from the developer portal.
-  appId: process.env.SKILL_ID || '',
+  // App-ID. TODO: set to your own Skill App ID from the developer portal. KS done 12/21 9:51 am MT
+  appId: process.env.SKILL_ID || 'run-hackathon-alexa-2021-FirstSkill',
 
   // Salesforce Constants
-  INSTANCE_URL: process.env.INSTANCE_URL || '', // TODO Set your own
+  INSTANCE_URL: process.env.INSTANCE_URL || '', // TODO Set your own. KS done 12/21
   VOICE_CODE_OBJECT_NAME: process.env.VOICE_CODE_OBJECT_NAME || 'voice_code__c',
   VOICE_CODE_FIELD_NAME: process.env.VOICE_CODE_FIELD_NAME || 'code__c',
 
