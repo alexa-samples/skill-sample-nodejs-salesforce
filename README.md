@@ -39,7 +39,7 @@ Together, we'll build a skill that is invoked with the name Salesforce Demo.
 Alexa, open Salesforce Demo
 ```
 
-Let's get started!
+Let's get started! 👾
 
 1. **Salesforce Setup** - Set up a Salesforce org using Trailhead Playground.
 2. **Deploy** - Customize and deploy the provided skill. 
