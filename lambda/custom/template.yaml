@@ -22,7 +22,7 @@ Resources:
     Type: 'AWS::Serverless::Function'
     Properties:
       Handler: index.handler
-      Runtime: nodejs6.10
+      Runtime: nodejs12.x
       CodeUri: .
       Description: 'A Lambda function that responds to Alexa requests and integrates with Salesforce. Created from https://github.com/alexa/alexa-for-business/tree/master/salesforce/skill-sample-nodejs-salesforce.'
       Environment:
